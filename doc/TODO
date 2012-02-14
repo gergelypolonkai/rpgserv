@@ -1,0 +1,8 @@
+[ ] Regisztráció
+[ ] Jogok
+[ ] Jogkörök
+[ ] Telepítéskor egy admin jogú felhasználó létrehozása
+[ ] Moduláris kialakítás: egy modul egy szerepjáték-rendszert ír le
+    Karakteralkotás szerepjáték-rendszer alapján
+    [ ] pont-típusok definiálása (pl. TÉ, VÉ, KÉ, HM, Pszi, Mana, mi mire költhető)
+    [ ] lehetséges képességek (Asztrál, Akaraterő, Ügyesség, stb.)
