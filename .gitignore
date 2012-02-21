@@ -1,0 +1,16 @@
+Makefile
+Makefile.in
+src/.deps
+src/rpgserv
+*.o
+.*.swp
+aclocal.m4
+config.log
+autom4te.cache
+config.status
+config.h
+configure
+depcomp
+install-sh
+missing
+stamp-h1
