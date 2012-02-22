@@ -12,7 +12,7 @@ AC_ARG_ENABLE([memcached], AS_HELP_STRING([--enable-memcached],[Build with memca
 AM_CONDITIONAL([ENABLE_MEMCACHED], [test "$enable_memcached" = "yes"])
 
 if test "$enable_memcached" = "yes"; then
-	PKG_CHECK_MODULES(MEMCACHED, libmemcached)
+	PKG_CHECK_MODULES([MEMCACHED], libmemcached)
 	AC_DEFINE([ENABLE_MEMCACHED], [1], [Define to compile with memcached support])
 fi
 
