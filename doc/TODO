@@ -1,8 +1,73 @@
-[ ] Regisztráció
-[ ] Jogok
-[ ] Jogkörök
-[ ] Telepítéskor egy admin jogú felhasználó létrehozása
-[ ] Moduláris kialakítás: egy modul egy szerepjáték-rendszert ír le
-    Karakteralkotás szerepjáték-rendszer alapján
-    [ ] pont-típusok definiálása (pl. TÉ, VÉ, KÉ, HM, Pszi, Mana, mi mire költhető)
-    [ ] lehetséges képességek (Asztrál, Akaraterő, Ügyesség, stb.)
+1. Feature list
+===============
+
+1.1. Basics
+-----------
+
+[ ] Registration
+[ ] Permissions
+[ ] Roles (groups of permissions)
+[ ] During installation, create a user with the admin permission enabled
+[ ] Modular design: each module describes one RPG system
+
+1.2. Character creation is based on the given system
+----------------------------------------------------
+
+[ ] Define possible abilities, like Dexterity, Strength, etc.
+[ ] Define point types (eg. TÉ, VÉ, KÉ, HM, Pszi, Mana, what can be spent on what)
+[ ] Define races with ability-modifiers and such
+
+1.3. Module creation based on the given system
+----------------------------------------------
+
+[ ] Generate NPC's just like characters
+[ ] Create maps
+[ ] Basic storyline editing
+
+2. Alapok
+=========
+
+2.1. Registration
+-----------------
+
+* Fill the required fields
+* E-mail validation?
+
+2.2. Users
+----------
+
+* User name
+* Password
+* E-mail address
+
+2.3. Characters
+---------------
+* RPG system ID
+* Creator user
+* Current module
+* System-dependant data
+
+3. M.A.G.U.S. - ETK rendszer
+============================
+
+3.1. Karakteralkotás
+--------------------
+
+* Képességek kockadobással állapíthatók meg
+* Egyes értékek számolódnak másokból
+    <ability id="gy">
+        <name lang="hu">Gy</name>
+	<description lang="hu">Gyorsaság</description>
+	<formula>d6+12</formula>
+    </ability>
+    <property id="ke">
+        <name lang="hu">KÉ</name>
+	<description lang="hu">Kezdeményező érték</description>
+	<formula>(ability:gy - 10) + (ability:ugy - 10)</formula>
+	<point-types>
+	    <point-type point="hm">
+	    	<formula>1</formula>
+	    </point-type>
+	</point-types>
+    </property>
+    <point id="hm" />
